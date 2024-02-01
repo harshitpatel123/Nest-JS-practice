@@ -15,16 +15,16 @@ export class userservice {
 
     private readonly logger = new Logger(userservice.name);
 
-    @Cron('15 * * * * *')
-    handleCron() {
-        this.logger.debug('Called when the current second is 15');
-        console.log('crone job is active')
-    }
+    // @Cron('15 * * * * *')
+    // handleCron() {
+    //     this.logger.debug('Called when the current second is 15');
+    //     console.log('crone job is active')
+    // }
 
-    @Timeout(3000)
-    timefunc(){
-        console.log("this will run after  3 sec")
-    }
+    // @Timeout(3000)
+    // timefunc(){
+    //     console.log("this will run after  3 sec")
+    // }
 
 getuser(): Promise < user[] > {
     return this.usersRepository.find();
